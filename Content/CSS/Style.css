@@ -1,0 +1,197 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+}
+/*PRODUCT VIEW START*/
+
+
+
+.categoryItem {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #fbb13a;
+}
+
+.categoryItem > div:nth-child(1) {
+    height: 180px;
+}
+
+    .categoryItem > div:nth-child(1) img {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        -webkit-transition: all 0.435s ease;
+        -moz-transition: all 0.435s ease;
+        -ms-transition: all 0.435s ease;
+        -o-transition: all 0.435s ease;
+        transition: all 0.435s ease;
+        z-index: 1;
+    }
+        .categoryItem > div:nth-child(1) img:hover {
+            -moz-transform: scale(1.25);
+            -o-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+            -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+            z-index: 2;
+        }
+
+    .categoryItem > div:nth-child(2) {
+        height: 50px;
+        background-color: black;
+        color: #fbb13a;
+    }
+
+        .categoryItem > div:nth-child(2) span {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 50px;
+            margin-left: 32px;
+        }
+
+/*PRODUCT VIEW END*/
+
+/*PRODUCTLIST VIEW START*/
+
+.ProductListItem {
+    border: 1px solid #d8d8d8;
+}
+
+.ProductListItem > div:nth-child(1) {
+    background-color: #d8d8d8;
+    padding:3px;
+    color:black;
+    font-weight: bold;
+    min-height: 30px;
+    line-height:30px;
+}
+
+    .ProductListItem > div:nth-child(2) img {
+    width: 100px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+        .ProductListItem > div:nth-child(2) img:hover {
+            -moz-transform: scale(2);
+            -o-transform: scale(2);
+            -ms-transform: scale(2);
+            -webkit-transform: scale(2);
+            transform: scale(2);
+            z-index: 2;
+        }
+
+    .ProductListItem > div:nth-child(2) {
+        min-height:50px;
+    }
+
+
+/*PRODUCTLIST VIEW END*/
+
+
+/*SHOWPRODUCT VIEW START*/
+
+
+.productDetailItem {
+    border: 1px solid #d8d8d8;
+    padding: 25px;
+}
+
+    .productDetailItem h3 {
+        line-height: 75px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .productDetailItem p:nth-child(1) {
+        line-height: 50px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+/*SHOWPRODUCT VIEW END*/
+
+
+/*LAYOUT START*/
+
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    display: block;
+    background: #f5f5f5;
+    font-size: 13px;
+    border-top: 1px solid #d8d8d8;
+    bottom:0;
+    line-height:50px;
+}
+
+nav {
+    width:100%;
+    height: 70px;
+    background: white;
+    border:transparent;
+    border-top: 3px solid #00b2e2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar {
+    width: 1185px;
+    height: 70px;
+    margin:0 auto;
+}
+
+.nav-header img {
+    width: 166.66px;
+    height: 50px;
+    margin-top: 6px;
+    float:left;
+}
+
+.nav-items {
+    margin-left: 30px;
+    margin-top: 25px;
+    float:left;
+}
+
+.nav-items ul li {
+    margin-left: 5px;
+    display: inline;
+    float: left !important;
+    font-size: 16px;
+}
+
+    .nav-items ul li a {
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Find alle LI i NAV UL, Bortset fra sidste LI, og tilføj noget derefter. */
+    .nav-bar ul li:not(:last-child):after {
+        content: " | ";
+    }
+
+#content {
+    padding:25px;
+}
+
+
+/*LAYOUT END*/

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Lightbox/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/CSS/Style.css" type="text/css" />
+    <link href="~/Content/CSS/NZ2-Columns.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header></header>
+        <nav>
+            <div class="nav-bar">
+                <div class="nav-header">
+                    <a href="/Home/Products"><img src="~/Content/Images/Layout/logobrand-logo-50X166.png" /></a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li>
+                            <a href="/Home/Index"><i class="fas fa-home"></i> Home</a>
+                        </li>
+
+                        <li>
+                            <a href="/Home/Products"><i class="fas fa-archive"></i> Categories</a>
+                        </li>
+
+                        <li>
+                            <a href="/Home/cart"><i class="fas fa-shopping-cart"></i> cart</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br />
+        <div id="content">
+            @RenderBody()
+        </div>
+
+        <footer>
+            <span><b>Firmanavn</b> · Havnevej 127 B · DK-8500 Grenaa · Tel. +45 42 94 26 23 · <a href="mailto:jannich.ariyanayagam@gmail.com">support@hotmail.com</a> · <a href="#">www.jannich.dk</a></span>
+        </footer>
+    </div>
+    <script src="~/Content/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/Lightbox/js/lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿@model ProductVM
+@{
+    ViewBag.Title = "Show product: " + Model.Product.Name;
+}
+
+<div class="row">
+    <div class="col-12">
+        <h2>@Model.Product.Name</h2>
+    </div>
+    <div class="col-2">
+        Søgning
+    </div>
+    <div class="col-10">
+        <div class="productDetailItem">
+            <div class="row">
+                <div class="col-12">
+                    <h3>
+                        @Model.Product.Name
+                    </h3>
+                    <div class="col-6">
+                        <p>
+                            @Html.Raw(Model.Product.Description.Replace("/n", "<Br />"))
+                        </p>
+                        <table>
+                            <tr>
+                                <td>Varenummer:</td>
+                                <td>@Model.Product.ID</td>
+                            </tr>
+                            <tr>
+                                <td>Price:</td>
+                                <td>@Model.Product.Price</td>
+                            </tr>
+                            <tr>
+                                <td>Leveringstid</td>
+                                <td>2-3 dage</td>
+                            </tr>
+                            <tr>
+                                <td>Producent</td>
+                                <td>@Model.Product.ManufactureID</td>
+                            </tr>
+                            <tr>
+                                <td>Lagerstatus:</td>
+                                <td>@(Model.Product.StorageAmount > 0 ? "På lager" : "Ikke på lager")</td>
+                            </tr>
+                            <tr>
+                                <td>Lagerantal:</td>
+                                <td>@Model.Product.StorageAmount</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                        <div class="img-boxed">
+                            <a href="~/Content/Images/Products/@Model.Product.Image" data-lightbox="Photograpy" data-title="@Model.Product.Name" onerror="this.src='PCS.jpg';">
+                                <img class="img-responsive" src="~/Content/Images/Products/@Model.Product.Image" />
+                            </a>
+                            <a href="~/Content/Images/Slider/@Model.Product.SubImage" data-lightbox="Photograpy" data-title="@Model.Product.Name" onerror="this.src='PCS.jpg';"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="/Home/ProductList/@Model.Product.CategoryID">[Tilbage til @Model.Category.name]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

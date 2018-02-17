@@ -1,0 +1,35 @@
+﻿@model List<Category>
+<link rel="stylesheet" href="/Content/CSS/NZ2-Columns.css" type="text/css" />
+<link rel="stylesheet" href="/Content/CSS/Style.css" type="text/css" />
+@{
+    ViewBag.Title = "Products";
+}
+<div id="Wrapper">
+    <div class="row">
+        <div class="col-12">
+            <h2>Produkter</h2>
+        </div>
+        <div class="col-2">
+            Søgning
+        </div>
+        <div class="col-10">
+            <div class="row">
+                @foreach (Category cat in Model)
+                {
+                    <a href="/Home/ProductList/@cat.ID">
+                        <div class="col-4">
+                            <div class="categoryItem">
+                                <div>
+                                    <img src="~/Content/Images/Categories/@cat.Image" />
+                                </div>
+                                <div>
+                                    <span>@cat.name</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
